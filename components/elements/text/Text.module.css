@@ -1,0 +1,41 @@
+.h1 {
+
+    color: rgb(78, 51, 255);
+    font-size: 60px;
+    font-weight: 600;
+    margin: 0px 0px 10px 0px;
+    color: black;
+    
+}
+
+.h2 {
+
+    font-size: 55px;
+    font-weight: 500;
+    margin: 0px 0px 0px 0px;
+    color: black;
+
+}
+
+.h3{
+    font-size: 30px;
+    font-weight: 300;
+    color: black;
+}
+
+.h4{
+    font-size: 30px;
+    font-weight: 200;
+    color: black;
+}
+
+.h5 {
+    font-size: 16px;
+}
+
+.parag{
+    font-size: 18px;
+    font-weight: 220;
+    margin: 15px 0px 20px 0px;
+    color: black;
+}
