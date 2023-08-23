@@ -2,6 +2,8 @@
 import { H1, Parag } from '../components/elements/text/text';
 import { Frame, Item, Wall } from '../components/layout/layout';
 import { Button } from '../components/elements/button/button';
+import Hero from '@/components/section/hero/hero';
+import imgSide from '../components/section/hero/images/talking.jpg'
 
 export default function Home() {
   return (
@@ -18,7 +20,7 @@ export default function Home() {
           </Item>
         </Frame>
       </Wall>
-    
+
     </>
   )
 }

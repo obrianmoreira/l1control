@@ -1,6 +1,6 @@
 import Style from './Field.module.css';
 
-export const Field = (props, label, input, field) => {
+const Field = (props, label, input, field) => {
 
     return (
 
@@ -16,3 +16,5 @@ export const Field = (props, label, input, field) => {
     )
 
 }
+
+export default Field;

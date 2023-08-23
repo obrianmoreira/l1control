@@ -1,0 +1,15 @@
+#carouselHero{
+    text-align: center;
+}
+
+#frameCarouselHero{
+    justify-content: center;
+}
+
+#sideImage{
+    background-color: aliceblue;
+}
+
+#centerImage{
+    text-align: center;
+}
