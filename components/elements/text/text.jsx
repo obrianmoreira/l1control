@@ -54,7 +54,7 @@ export const H4 = (props) => {
 
         <>
 
-            <h1 id={props.style} className={Style.h4}>
+            <h1 id={props.style} className={Style.h4} css={props.css}>
                 {props.text}
             </h1>
 

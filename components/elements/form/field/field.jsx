@@ -1,15 +1,17 @@
+import { Item } from '@/components/layout/layout';
 import Style from './Field.module.css';
 
-const Field = (props, label, input, field) => {
+const Field = (props, labelId, input) => {
 
     return (
 
         <>
         
-            <div id={field} className={Style.field}>
-                <label htmlFor={props.htmlFor} id={label} className={Style.label}>{props.label}</label>
-                <input type={props.type} id={input} className={Style.input} placeholder={props.placeholder}/>
-            </div>
+            <Item style={Style.field}>
+                <label htmlFor={props.htmlFor} id={labelId} style={props.css} className={Style.label}>{props.label}</label>
+                <input type={props.type} id={input} className={Style.input} placeholder={props.placeholder} onChange={props.onChange} onClick={props.onClick}/>
+            </Item>
+
 
         </>
 

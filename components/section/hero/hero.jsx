@@ -1,11 +1,11 @@
 'use client'
 import { Button } from "@/components/elements/button/button"
-import { H1, H2, Parag } from "@/components/elements/text/text"
+import { H1, H2, H3, Parag } from "@/components/elements/text/text"
 import { Frame, Item, Wall } from "@/components/layout/layout"
 import { useState } from "react"
 import Style from './Hero.module.css';
 import Image from "next/image"
-import Form from "@/components/elements/form/form"
+import Form, { PriceCalculator } from "@/components/elements/form/form"
 
 const Hero = (props) => {
 
@@ -31,6 +31,17 @@ const Hero = (props) => {
                 button="Know More"
             />
             <SideForm
+                title="Call to Action"
+                subtitle="Sub Call to Action"
+                description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum explicabo, iusto molestias vel, repellendus voluptatem explicabo."
+                formTitle="Subscribe Bellow"
+                formDescription="Lorem ipsum dolor sit, amet consectetur elit."
+                name="Nome"
+                email="Email"
+                phone="Telefone"
+                button="Enviar"
+            />
+            <SideCalculator
                 title="Call to Action"
                 subtitle="Sub Call to Action"
                 description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum explicabo, iusto molestias vel, repellendus voluptatem explicabo."
@@ -263,6 +274,45 @@ export const BackgroundImage = (props) => {
 }
 
 export const SideForm = (props) => {
+
+    let userCss = props.userCss;
+    
+    return (
+
+        <>
+        
+            <Wall css={userCss}>
+                <Frame>
+                    <Item>
+                        <H1 text={props.title}/>
+                        <H3 text={props.subtitle}/>
+                        <Parag text={props.description}/>
+                        <Button text={props.button}/>
+                    </Item>
+                    <Item>
+                        <Form
+                            title={props.formTitle}
+                            description={props.formDescription}
+                            firstLabel={props.firstLabel}
+                            firstField={props.firstField}
+                            secondField={props.secondField}
+                            thirdField={props.thirdField}
+                            fourthField={props.fourthField}
+                            button={props.button}
+                            labelState="none"
+                            css={props.formCss}
+                        />
+                    </Item>
+                </Frame>
+            </Wall>
+        
+        </>
+
+    )
+
+}
+
+export const SideCalculator = (props) => {
     
     return (
 
@@ -277,14 +327,7 @@ export const SideForm = (props) => {
                         <Button text={props.button}/>
                     </Item>
                     <Item>
-                        <Form
-                            title={props.formTitle}
-                            description={props.formDescription}
-                            name={props.name}
-                            email={props.email}
-                            phone={props.phone}
-                            button={props.button}
-                        />
+                        <PriceCalculator/>
                     </Item>
                 </Frame>
             </Wall>
