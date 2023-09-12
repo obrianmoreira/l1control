@@ -28,13 +28,13 @@ export const Frame = ({children, style, css}) => {
 
 }
 
-export const Item = ({children, style, css}) => {
+export const Item = ({children, style, css, onclick}) => {
 
     return (
 
         <>
         
-            <div id={style} className={Style.item} style={css}>
+            <div id={style} className={Style.item} style={css} onClick={onclick}>
                 {children}
             </div>
         
@@ -55,6 +55,24 @@ export const Card = ({children, style, css}) => {
             </div>
 
         </> 
+
+    )
+
+}
+
+export const Hero = ({style, children, css}, props) => {
+
+    return (
+
+        <>
+        
+                <div id={style} className={Style.hero} style={css}>
+                    {children}
+                </div>
+
+                
+        
+        </>
 
     )
 

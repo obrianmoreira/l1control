@@ -1,15 +1,105 @@
-#carouselHero{
-    text-align: center;
+/* General Hero Deisgn */
+
+#hero {
+    background-color: #fff;
 }
 
-#frameCarouselHero{
-    justify-content: center;
+#textItem{
+    flex-basis: 100%;
+    padding-top: 70px;
+    padding-right: 80px;
 }
 
-#sideImage{
-    background-color: aliceblue;
+#h2 {
+    font-size: 40px;
+    font-weight: 200;
 }
 
-#centerImage{
-    text-align: center;
+#h3 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#spamParag{
+    font-size: 14px;
+    font-weight: 250;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+}
+
+#formItem{
+    background-color: #fff;
+    padding: 30px;
+    flex-basis: 80%;
+    padding-top: 50px;
+}
+
+#input{
+    margin-bottom: 20px;
+    height: 170px;
+}
+
+#button{
+    margin-top: 0px;
+    width: 100%;
+}
+
+#firstField{
+    margin-top: 50px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+    #hero{
+        height: fit-content;
+        padding: 30px;
+        background-image: none;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #h2 {
+        font-size: 20px;
+    }
+
+    
+    #textItem{
+        flex-basis: 100%;
+        padding: 0px;
+        padding-top: 0px;
+    }
+
+    #formItem{
+        margin-top: 30px;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1440px) {
+    #hero{
+        display: block;
+        background-image: none;
+        text-align: center;
+    }
+
+    #h2 {
+        font-size: 20px;
+    }
+
+    #heroFrame{
+        display: block;
+    }
+
+    #textItem{
+        flex-basis: 100%;
+        padding: 0px;
+        padding-top: 0px;
+    }
+
+    #formItem{
+        margin-top: 30px;
+    }
 }

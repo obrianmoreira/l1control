@@ -1,0 +1,11 @@
+.beforeFirstImage{
+
+    background-image: url('images/depo1.jpg');
+    background-size: cover;
+}
+
+.afterFirstImage{
+    height: 800px;
+    background-image: url('images/badepo1.jpg');
+    background-size: cover;
+}

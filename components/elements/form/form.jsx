@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Button } from "../../elements/button/button";
 import { H1, H2, H3, H4, Parag } from "../../elements/text/text";
 import { Card, Frame, Item } from "../../layout/layout";
-import { useDispatch, useSelector } from "react-redux";
 import { updateServiceVisibility } from "@/redux/action";
 import Style from './Form.module.css';
 import Field from "./field/field";
@@ -23,13 +22,13 @@ const Form = (props) => {
             <Card style={Style.card} css={props.css}>
                 <H4 text={props.title}/>
                 <Parag text={props.description} />
-                <Item style={Style.item}>
-                    <Field css={labelVisibility} placeholder={props.firstField}/>
-                    <Field css={labelVisibility} placeholder={props.secondField}/>
-                    <Field css={labelVisibility} placeholder={props.thirdField}/>
-                    <Field css={labelVisibility} placeholder={props.fourthField}/>
+                <Item style={props.item}>
+                    <Field css={labelVisibility} label={props.firstLabel} placeholder={props.firstField}/>
+                    <Field css={labelVisibility} label={props.secondLabel} placeholder={props.secondField}/>
+                    <Field css={labelVisibility} label={props.thirdLabel} placeholder={props.thirdField}/>
+                    <Field css={labelVisibility} label={props.fourthLabel} placeholder={props.fourthField}/>
+                    <Button text={props.button} style={Style.button}/>
                 </Item>
-                <Button text={props.button} style={Style.button}/>
             </Card>
 
         </>

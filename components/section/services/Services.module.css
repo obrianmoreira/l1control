@@ -1,0 +1,17 @@
+#wall {
+    padding: 0px;
+}
+
+#imgItem {
+    flex-basis: 100%;
+}
+
+#textItem{
+    padding: 40px;
+    flex-basis: 40%;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+}

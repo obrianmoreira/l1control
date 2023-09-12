@@ -6,7 +6,7 @@ export const H1 = (props) => {
 
         <>
 
-            <h1 id={props.style} className={Style.h1}>
+            <h1 id={props.style} className={Style.h1} style={props.css}>
                 {props.text}
             </h1>
 
@@ -22,7 +22,7 @@ export const H2 = (props) => {
 
         <>
 
-            <h1 id={props.style} className={Style.h2}>
+            <h1 id={props.style} className={Style.h2} style={props.css}>
                 {props.text}
             </h1>
 
@@ -38,7 +38,7 @@ export const H3 = (props) => {
 
         <>
 
-            <h1 id={props.style} className={Style.h3}>
+            <h1 id={props.style} className={Style.h3} style={props.css}>
                 {props.text}
             </h1>
 
@@ -54,7 +54,7 @@ export const H4 = (props) => {
 
         <>
 
-            <h1 id={props.style} className={Style.h4} css={props.css}>
+            <h1 id={props.style} className={Style.h4} style={props.css}>
                 {props.text}
             </h1>
 
@@ -70,7 +70,7 @@ export const H5 = (props) => {
 
         <>
 
-            <h1 id={props.style} className={Style.h5}>
+            <h1 id={props.style} className={Style.h5} style={props.css}>
                 {props.text}
             </h1>
 
@@ -86,7 +86,7 @@ export const Parag = (props) => {
 
         <>
 
-            <h1 id={props.style} className={Style.parag}>
+            <h1 id={props.style} className={Style.parag} style={props.css}>
                 {props.text}
             </h1>
 
