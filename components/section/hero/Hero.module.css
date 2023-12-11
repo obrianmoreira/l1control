@@ -1,17 +1,14 @@
 /* General Hero Deisgn */
 
-#hero {
-    background-color: #fff;
-}
-
 #textItem{
+    text-align: center;
     flex-basis: 100%;
-    padding-top: 70px;
-    padding-right: 80px;
+    padding-top: 0px;
+    padding-right: 0px;
 }
 
 #h2 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 200;
 }
 

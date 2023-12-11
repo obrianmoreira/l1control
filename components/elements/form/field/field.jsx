@@ -7,9 +7,9 @@ const Field = (props, labelId) => {
 
         <>
         
-            <Item style={Style.field}>
-                <label htmlFor={props.htmlFor} id={props.labelId} style={props.css} className={Style.label}>{props.label}</label>
-                <input type={props.type} id={props.input} className={Style.input} placeholder={props.placeholder} onChange={props.onChange} onClick={props.onClick}/>
+            <Item>
+                <label htmlFor="htmlFor" id={props.labelId} style={props.labelStyle} className={Style.label}>{props.label}</label>
+                <input type={props.type} id={props.inputId} className={Style.input} placeholder={props.placeholder} onChange={props.onChange} onClick={props.onClick}/>
             </Item>
 
 

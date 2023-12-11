@@ -76,9 +76,6 @@ const Hero = (props) => {
                 centerImagPath={props.centerImagPath}
                 centerImagAlt={props.centerImagAlt}
             />
-
-                
-        
         </>
 
     )

@@ -6,8 +6,8 @@ export const Button = (props) => {
 
         <>
         
-            <button id={props.style} className={Style.button} onClick={props.buttonClick}>
-                <a href={props.href}>{props.text}</a>
+            <button id={props.style} className={Style.button} onClick={props.buttonClick} style={props.buttonStyle}>
+                <a href={props.href}>{props.buttonText}</a>
             </button>
         
         </>
