@@ -1,5 +1,5 @@
 import { Frame, Wall } from "@/components/layout/layout";
-import { H2, H4, Parag} from "../text/text";
+import { H4, Parag} from "../text/text";
 import Style from './Footer.module.css';
 import Image from "next/image";
 import logo from '../../elements/navbar/images/logo.png'

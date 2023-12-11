@@ -2,16 +2,11 @@
 import { Wall, Frame, Item } from "@/components/layout/layout"
 import Style from '../navbar/Navbar.module.css';
 import { Button } from "../button/button";
-import { H1, H2, H3 } from "../text/text";
+import { H3 } from "../text/text";
 import {GrMenu} from 'react-icons/gr'
 import { useState } from "react";
 import Image from "next/image";
 import logo from './images/logo.png'
-const Navbar = () => {
-
-
-
-}
 
 export const ClassicNavbar = () => {
 

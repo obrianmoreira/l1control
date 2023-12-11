@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import { Button } from "../../elements/button/button";
-import { H1, H2, H3, H4, Parag } from "../../elements/text/text";
+import { H1, H4, Parag } from "../../elements/text/text";
 import { Card, Frame, Item } from "../../layout/layout";
 import { updateServiceVisibility } from "@/redux/action";
 import Style from './Form.module.css';
