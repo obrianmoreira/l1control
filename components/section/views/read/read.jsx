@@ -23,7 +23,7 @@ const ReadService = () => {
 
     const getTasks = useCallback(async () => {
         try {
-            const res = await fetch('http://localhost:3000/api/tasks', {
+            const res = await fetch('/api/tasks', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ const ReadService = () => {
 
     const getSearchInput = useCallback(async () => {
         try {
-            const res = await fetch('http://localhost:3000/api/searches', {
+            const res = await fetch('/api/searches', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -83,7 +83,7 @@ const ReadService = () => {
 
     async function handleDelete(taskId) {
         try {
-            const res = await fetch('http://localhost:3000/api/tasks', {
+            const res = await fetch('/api/tasks', {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
@@ -119,23 +119,7 @@ const ReadService = () => {
                         <th><button id={Style.deleteButton} onClick={() => handleDelete(checked)}>Deletar</button></th>      
                         <th><button id={Style.deleteButton} onClick={() => handleSelectAll(selection)}>Select All</button></th>      
                     </tr>
-                    {searchQuery.map((query) => {
-                    return (
-                        <> 
-                                <tr key={query.id} id={Style.cellId}>
-                                    <Table cell={query.searchInput}/>
-                                    {openFilter
-                                        ? (<><td onClick={() => handleSelection(query.id)}>{checked.includes(query.id) ? (<>{<MdRadioButtonChecked className={Style.iconItem}/>}</>)  : (<><MdRadioButtonUnchecked className={Style.iconItem}/></>)}</td></>):(<></>)
-                                    }
-                                </tr>
-                                
-                        </>
-                    )
-                })}
-                </>) : (<></>)}
-                {visibility ? (<>
-                    
-                </>) : (<>{tasks.map((task) => {
+                    {tasks.map((task) => {
                         return (
                             <> 
                                     <tr key={task.id} id={Style.cellId}>
@@ -152,7 +136,8 @@ const ReadService = () => {
                                     
                             </>
                         )
-                    })}</>)}
+                    })}
+                </>) : (<></>)}
             </tbody>
 
         </table>
