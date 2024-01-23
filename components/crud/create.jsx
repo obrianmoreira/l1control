@@ -5,13 +5,13 @@ async function CreateTasks(taskResquest, taskResquester, taskDate, taskTime, tas
     try {
         const dbInstance = collection(database, 'tasks');
         await setDoc(doc(dbInstance), {
-            task : {
-                taskResquest,
-                taskResquester,
-                taskDate,
-                taskTime,
-                taskExecutor,
-                taskStatus,
+            tasks : {
+                taskResquest: taskResquest,
+                taskResquester: taskResquester,
+                taskDate: taskDate,
+                taskTime: taskTime,
+                taskExecutor: taskExecutor,
+                taskStatus: taskStatus,
             }
         }).then(() => {
             console.log('data sent');
