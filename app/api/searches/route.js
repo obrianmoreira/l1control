@@ -1,4 +1,4 @@
-import ReadTasks, { ReadSearches } from "@/components/crud/read";
+/*import ReadTasks, { ReadSearches } from "@/components/crud/read";
 import SearchTasks, { CreateSearch } from "@/components/crud/search";
 
 export async function POST(request) {
@@ -12,5 +12,5 @@ export async function POST(request) {
 export async function GET() {
     const searchResult = await ReadSearches();
     return Response.json(searchResult);
-}
+}*/
 
