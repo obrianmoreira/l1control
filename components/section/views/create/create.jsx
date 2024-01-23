@@ -23,14 +23,12 @@ const CreateService = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    tasks: {
-                        taskRequest,
-                        taskRequester,
-                        taskDate,
-                        taskTime,
-                        taskExecutor,
-                        taskStatus,
-                    }
+                    taskRequest,
+                    taskRequester,
+                    taskDate,
+                    taskTime,
+                    taskExecutor,
+                    taskStatus,
                 })
             });
             const tasks = await res.json();
