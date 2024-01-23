@@ -114,21 +114,16 @@ const ReadService = () => {
                 </tr>
             </thead>
                 <tbody>
-                {openFilter ? (<>
-                    <tr>
-                        <th><button id={Style.deleteButton} onClick={() => handleDelete(checked)}>Deletar</button></th>      
-                        <th><button id={Style.deleteButton} onClick={() => handleSelectAll(selection)}>Select All</button></th>      
-                    </tr>
-                    {tasks.map((task) => {
+                {tasks.map((taskObject) => {
                         return (
                             <> 
-                                    <tr key={task.id} id={Style.cellId}>
-                                        <Table cell={task.taskResquest}/>
-                                        <Table cell={task.taskResquester}/>
-                                        <Table cell={task.taskDate}/>
-                                        <Table cell={task.taskTime}/>
-                                        <Table cell={task.taskExecutor}/>
-                                        <Table cell={task.taskStatus}/>
+                                    <tr key={taskObject.id} id={Style.cellId}>
+                                        <Table cell={taskObject.task.taskRequest}/>
+                                        <Table cell={taskObject.task.taskRequester}/>
+                                        <Table cell={taskObject.task.taskDate}/>
+                                        <Table cell={taskObject.task.taskTime}/>
+                                        <Table cell={taskObject.task.taskExecutor}/>
+                                        <Table cell={taskObject.task.taskStatus}/>
                                         {openFilter
                                             ? (<><td onClick={() => handleSelection(task.id)}>{checked.includes(task.id) ? (<>{<MdRadioButtonChecked className={Style.iconItem}/>}</>)  : (<><MdRadioButtonUnchecked className={Style.iconItem}/></>)}</td></>):(<></>)
                                         }
@@ -137,6 +132,12 @@ const ReadService = () => {
                             </>
                         )
                     })}
+                {openFilter ? (<>
+                    <tr>
+                        <th><button id={Style.deleteButton} onClick={() => handleDelete(checked)}>Deletar</button></th>      
+                        <th><button id={Style.deleteButton} onClick={() => handleSelectAll(selection)}>Select All</button></th>      
+                    </tr>
+                    
                 </>) : (<></>)}
             </tbody>
 

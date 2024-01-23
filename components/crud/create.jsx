@@ -1,13 +1,13 @@
 import { collection, doc, setDoc } from "firebase/firestore";
 import { database } from "./database";
 
-async function CreateTasks(taskResquest, taskResquester, taskDate, taskTime, taskExecutor, taskStatus) {
+async function CreateTasks(taskRequest, taskRequester, taskDate, taskTime, taskExecutor, taskStatus) {
     try {
         const dbInstance = collection(database, 'tasks');
         await setDoc(doc(dbInstance), {
-            tasks : {
-                taskResquest: taskResquest,
-                taskResquester: taskResquester,
+            task : {
+                taskRequest: taskRequest,
+                taskRequester: taskRequester,
                 taskDate: taskDate,
                 taskTime: taskTime,
                 taskExecutor: taskExecutor,

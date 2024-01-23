@@ -25,7 +25,7 @@ export async function ReadSearches() {
         searchQuery.forEach((doc) => {
             searchArray.push({id: doc.id, ...doc.data()});
         });
-        const lastSearchQuery = searchArray.slice(-1)[0];
+        /*const lastSearchQuery = searchArray.slice(-1)[0];
         const searchInput = lastSearchQuery.searchInput;
         const taskInstance = collection(database, 'tasks');
         const taskQuery = query(taskInstance, where('tasks', 'array-contains', searchInput));
@@ -33,8 +33,8 @@ export async function ReadSearches() {
         const taskArray = [];
         taskDocs.forEach((task) => {
             taskArray.push({id: task.id, ...task.data()});
-        })
-        return taskArray;
+        })*/
+        return searchArray;
     } catch(error) {
         console.log(error);
     }

@@ -14,7 +14,6 @@ export async function POST(request) {
     const taskStatus = tasks.taskStatus;
     const taskExecutor = tasks.taskExecutor;
     CreateTasks(taskRequest, taskRequester, taskDate, taskTime, taskStatus, taskExecutor);
-    console.log(taskRequest, taskRequester, taskDate, taskTime, taskStatus, taskExecutor);
     return Response.json('Correctly Done');
 
 }
