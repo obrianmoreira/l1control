@@ -1,35 +1,8 @@
-export const updateServiceType = (serviceName) => {
+export const updateSearchVisibility = (searchVisibility) => {
 
     return {
-        type: 'UPDATE_SERVICE_TYPE_ONE',
-        payload: serviceName,
+        type: 'UPDATE_SEARCH_VISIBILITY',
+        payload: searchVisibility,
     };
 
-};
-
-export const cardServiceType = (serviceName, servicePrice) => {
-
-    return {
-        type: 'UPDATE_CARD_SERVICE_TYPE',
-        payload: serviceName
-    };
-
-};
-
-export const cardServicePrice = (servicePrice) => {
-
-    return {
-        type: 'UPDATE_CARD_SERVICE_PRICE',
-        payload: servicePrice
-    };
-
-};
-
-export const updateServiceVisibility = (serviceVisibility) => {
-
-    return {
-        type: 'UPDATE_SERVICE_TYPE_VISIBILITY',
-        payload: serviceVisibility,
-    };
-    
 };

@@ -1,0 +1,59 @@
+#table {
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+}
+
+.collum {
+    background-color: #c4c2c2;
+    padding: 20px;
+    text-align: left;
+}
+
+#iconCollum {
+    background-color: #c4c2c2;
+}
+
+.iconItem{
+    margin-top: 5px;
+    width: 100%;
+    font-size: 25px;
+}
+
+#frameIconItem{
+    gap: 0px;
+}
+
+#cellId{
+    background-color: #fff;
+}
+
+#button {
+    margin-top: 0px;
+}
+
+#tableFilter {
+    text-align: center;
+}
+
+#buttonFilter {
+    text-align: right;
+}
+
+#deleteButton {
+    width: 100%;
+    background-color: red;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#deleteButton :hover {
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

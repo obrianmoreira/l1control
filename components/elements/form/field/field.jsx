@@ -8,8 +8,8 @@ const Field = (props, labelId) => {
         <>
         
             <Item>
-                <label htmlFor="htmlFor" id={props.labelId} style={props.labelStyle} className={Style.label}>{props.label}</label>
-                <input type={props.type} id={props.inputId} className={Style.input} placeholder={props.placeholder} onChange={props.onChange} onClick={props.onClick}/>
+                <label htmlFor={props.inputId} id={props.labelId} style={props.labelStyle} className={Style.label}>{props.label}</label>
+                <input type={props.type} id={props.inputId} className={Style.input} placeholder={props.placeholder} onChange={props.onChange} value={props.value} onClick={props.onClick}/>
             </Item>
 
 

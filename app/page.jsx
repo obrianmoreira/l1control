@@ -3,18 +3,26 @@ import MainHero from '@/components/section/hero/mainHero';
 import { useState, useEffect } from 'react';
 import { Wall } from '@/components/layout/layout';
 import SearchBar from '@/components/section/search/search';
-import TableBar from '@/components/section/table/table';
+import TasksPage from '@/components/section/views/read/read';
+import Table from '@/components/elements/table/table';
+import { combineReducers } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
+import reducer from '@/redux/reducer';
 
 export default function Home() {
 
-  const [searchBar, setSearchBar] = useState('*');
+  const rootReducer = combineReducers({
+    reducer,
+  });
 
-  useEffect(() => {
-      console.log(searchBar)
-  }, [searchBar])
+  const store = configureStore({
+    reducer: rootReducer,
+  })
 
   return (
     <>  
+      <Provider store={store}>
         <Wall>
           <div id='hero'>
             <MainHero
@@ -25,14 +33,13 @@ export default function Home() {
             />                
           </div>
           <div id='controls'>
-            <SearchBar
-              onChange={(e) => setSearchBar(e.target.value)}
-            />
+            <SearchBar/>
           </div>
           <div id='table'>
-            <TableBar/>
+            <TasksPage/>
           </div>
         </Wall>
+      </Provider>
     </>
   )
 }
